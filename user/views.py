@@ -34,7 +34,7 @@ def userlogincheck(request):
     if request.method == "POST":
         email = request.POST.get('uname')
         pswd = request.POST.get('upasswd')
-        print("Email = ", email, ' Password = ', pswd)
+        print("Email Address = ", email, ' Password = ', pswd)
         try:
             check = user.objects.get(email=email,passwd=pswd)
             status = check.status
